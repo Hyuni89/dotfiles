@@ -91,11 +91,7 @@ nnoremap <Esc><Esc> :noh<Enter>
 set nocompatible
 filetype off
 
-if has("mac")
-    set rtp+=/usr/local/opt/fzf
-elseif has("unix")
-    set rtp+=~/.fzf
-endif
+set rtp+=~/.fzf
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
