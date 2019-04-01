@@ -45,6 +45,9 @@ nnoremap <C-k><C-m> :MarkdownPreview<Enter>
 nnoremap <C-k><C-m><C-m> :MarkdownPreviewStop<Enter>
 nnoremap <C-p> :FZF<Enter>
 
+" Refresh vimrc
+nnoremap <C-k>R :so ~/.vimrc<Enter>
+
 " Move Line
 if has("mac")
 	map <A-Up> :m .-2<Enter>==

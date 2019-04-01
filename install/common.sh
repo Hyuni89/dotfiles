@@ -39,4 +39,11 @@ echo $ALIAS >> ~/.zshrc
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
+# tig (git visualize tool)
+if [ $OS = "Linux" ]; then
+    sudo apt install tig
+elif [ $OS = "Dawin" ]; then
+    brew install tig
+fi
+
 source install/vim.sh
