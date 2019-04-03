@@ -31,6 +31,7 @@ alias py="python3"
 alias l="ls -F"
 alias ll="ls -alF"
 alias sw="swift"
+alias tmux="tmux -2"
 stty -ixon
 '
 echo $ALIAS >> ~/.zshrc
@@ -40,10 +41,13 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
 # tig (git visualize tool)
+# tmux
 if [ $OS = "Linux" ]; then
     sudo apt install tig
+    sudo apt install tmux
 elif [ $OS = "Dawin" ]; then
     brew install tig
+    brew install tmux
 fi
 
 source install/vim.sh
