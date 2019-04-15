@@ -34,7 +34,8 @@ if has("mac")
 endif
 syntax on
 
-" Color Theme
+" Color
+set t_Co=256
 colorscheme jellybeans
 
 "" Key Map Setting
