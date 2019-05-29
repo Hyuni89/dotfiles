@@ -46,6 +46,11 @@ nnoremap <C-k><C-m> :MarkdownPreview<Enter>
 nnoremap <C-k><C-m><C-m> :MarkdownPreviewStop<Enter>
 nnoremap <C-p> :FZF<Enter>
 
+" Search
+" set wildignore += "*/*.o,*/tags,*/*.a,*/*.jpg,*/*.jpeg,*/*.png"
+" nnoremap // :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+nnoremap // :execute " grep -srnw --binary-files=text --exclude-dir=.git --exclude=tags . -e " . expand("<cword>") . " " <bar> cwindow<CR>
+
 " Refresh vimrc
 nnoremap <C-k>R :so ~/.vimrc<Enter>
 
