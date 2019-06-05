@@ -47,9 +47,17 @@ nnoremap <C-k><C-m><C-m> :MarkdownPreviewStop<Enter>
 nnoremap <C-p> :FZF<Enter>
 
 " Search
+function Find(word)
+    :execute " grep -srnwi --binary-files=text --exclude-dir=.git --exclude=tags . -e " . a:word . " " | copen
+endfunction
+function CaseFind(word)
+    :execute " grep -srnw --binary-files=text --exclude-dir=.git --exclude=tags . -e " . a:word . " " | copen
+endfunction
 " set wildignore += "*/*.o,*/tags,*/*.a,*/*.jpg,*/*.jpeg,*/*.png"
 " nnoremap // :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
-nnoremap // :execute " grep -srnw --binary-files=text --exclude-dir=.git --exclude=tags . -e " . expand("<cword>") . " " <bar> cwindow<CR>
+" nnoremap // :execute " grep -srnw --binary-files=text --exclude-dir=.git --exclude=tags . -e " . expand("<cword>") . " " <bar> cwindow<CR>
+" nnoremap // :execute "grep -srnw --exclude-dir=.git --exclude={tags,\\*.o,core\\*,cscope\\*,.\\*} . -e " . expand("<cword>") . " " <Bar> cwindow<CR>}
+nnoremap // :call CaseFind("<cword>")<CR>
 
 " Refresh vimrc
 nnoremap <C-k>R :so ~/.vimrc<Enter>
