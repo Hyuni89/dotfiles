@@ -16,7 +16,7 @@ set shiftwidth=4
 " Search
 set hlsearch
 set incsearch
-set smartcase 
+set ignorecase 
 
 " Clipboard
 set clipboard=unnamedplus
@@ -58,6 +58,7 @@ endfunction
 " nnoremap // :execute "grep -srnw --binary-files=text --exclude-dir=.git --exclude=tags . -e " . expand("<cword>") . " " <bar> cwindow<CR>
 " nnoremap // :execute "grep -srnw --exclude-dir=.git --exclude={tags,\\*.o,core\\*,cscope\\*,.\\*} . -e " . expand("<cword>") . " " <Bar> cwindow<CR>}
 nnoremap // :call CaseFind("<cword>")<CR>
+nnoremap <C-]> g<C-]>
 
 " Refresh vimrc
 nnoremap <C-k>R :so ~/.vimrc<Enter>
