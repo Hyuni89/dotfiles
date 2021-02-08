@@ -10,7 +10,6 @@ set cindent
 
 " Tab
 set tabstop=4
-set expandtab   " tab to space
 set shiftwidth=4
 
 " Search
@@ -183,6 +182,7 @@ Plugin 'ZoomWin'
 Plugin 'mattn/emmet-vim'
 Plugin 'ap/vim-css-color'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on
