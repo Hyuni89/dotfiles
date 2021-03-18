@@ -1,5 +1,5 @@
 # brew install
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # iterm2 install
-brew cask install iterm2
+brew install iterm2

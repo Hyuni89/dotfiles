@@ -2,23 +2,21 @@
 
 echo "Install dotfile START!!"
 
-OS=`uname`
+export OS=`uname`
 
 if [ $OS = "Linux" ]; then
 	echo "Only work in Debian Linux"
-    source install/linux.sh
-elif [ $OS = "Dawin" ]; then
+	sudo sh install/linux.sh
+elif [ $OS = "Darwin" ]; then
 	echo "Mac"
-	source install/mac.sh
+	sh install/mac.sh
 else
 	exit
 fi
 
-source install/common.sh
+sh install/common.sh
 
-ln -sF vimrc ~/.vimrc
-ln -sF tmux.conf ~/.tmux.conf
-
-source ~/.zshrc
+ln -sF `pwd`/vimrc ~/.vimrc
+ln -sF `pwd`/tmux.conf ~/.tmux.conf
 
 echo "Install dotfile DONE!!"
