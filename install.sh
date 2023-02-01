@@ -19,4 +19,11 @@ sh install/common.sh
 ln -sF `pwd`/vimrc ~/.vimrc
 ln -sF `pwd`/tmux.conf ~/.tmux.conf
 
+# install java
+# JAVA_HOME set (/usr/libexec/java_home -v version) on mac
+
+# terminal color theme
+# https://github.com/Gogh-Co/Gogh
+# https://github.com/lysyi3m/macos-terminal-themes
+
 echo "Install dotfile DONE!!"

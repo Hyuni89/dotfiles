@@ -93,10 +93,6 @@ vmap <A-Down> <A-j>
 vnoremap < <gv
 vnoremap > >gv
 
-" Bracket
-inoremap { {}<Left>
-inoremap {<Enter> {<Enter>}<Esc>O
-
 " Edit
 nnoremap <Space> i<Space><Esc>
 nnoremap <Enter> i<Enter><Esc>
@@ -171,7 +167,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'valloric/youcompleteme'
+" Plugin 'valloric/youcompleteme'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'keith/swift.vim'
